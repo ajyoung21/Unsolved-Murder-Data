@@ -61,7 +61,7 @@ L.control.layers(null, overlays).addTo(map);
 
 
   // Read in information on countries
-d3.json("/data/Data_Totals.json", function(error, data) {
+d3.json("static/data/Data_Totals.json", function(error, data) {
     // Clear out all existing markers on the map
     // markersLayer.clearLayers()
     
