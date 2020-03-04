@@ -26,9 +26,11 @@ d3.csv("static/data/Yearly_Totals.csv", function(error, data) {
         
             var trace = {
                 x: x_list,
+                
                 y: y_list,
                 name: latest_city,
                 type: 'scatter'
+
               };
 
               trace_list.push(trace)
@@ -44,7 +46,7 @@ d3.csv("static/data/Yearly_Totals.csv", function(error, data) {
 
 
         x_val = parseInt(array[i][1]['Year'])
-        y_val = array[i][1]['Unsolved Murder %']
+        y_val = array[i][1]['Total Murders']
       
 
         if (y_val > 0) {
@@ -54,11 +56,20 @@ d3.csv("static/data/Yearly_Totals.csv", function(error, data) {
 
         }
 
+    frames = []
+
     
       
       
     }
-      Plotly.newPlot('line-plot', trace_list);
+      Plotly.newPlot('line-plot', trace_list, {title: {text: 'Number of Murders Over Time'}, xaxis: {
+        title: 'Year'
+
+    },
+    yaxis: {
+        title: 'Number of Murders'
+
+    }},);
 
 
 })

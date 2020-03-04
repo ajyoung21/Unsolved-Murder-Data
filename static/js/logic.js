@@ -140,8 +140,8 @@ d3.json("static/data/Data_Totals.json", function(error, data) {
       
       
       // Throw those markers on the map
-      var marker = L.circleMarker(lat_lon, {radius: Math.sqrt(city_total_murders)/3, color: tickcolor, fillColor: fillcolor, fillOpacity: fillOpacity}).bindPopup("<h3>" + 
-      city_name + "</h3><hr><h5>Total Murders: " + city_total_murders + "</h5><h5>% Murders Unsolved: " + 
+      var marker = L.circleMarker(lat_lon, {radius: Math.sqrt(city_total_murders)/3, color: tickcolor, fillColor: fillcolor, fillOpacity: fillOpacity}).bindPopup("<h4>" + 
+      city_name + "</h4><hr><h5>Total Murders: " + city_total_murders + "</h5><h5>% Murders Unsolved: " + 
       Math.round(100*city_total_unsolved_murders_percent) + "%" + "</h5><hr><h5><strong>Racial Makeup of Murder Victims:</strong>"
       +"</h5><hr><h5>% Asian: " + Math.round(100*city_total_asian_percent) + "%"
       + "</h5><hr><h5>% Black: " + Math.round(100*city_total_black_percent) + "%"

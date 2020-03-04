@@ -75,7 +75,7 @@ if (current_city == null) {
     type: 'scatter',
     mode: 'lines',
     line: {color: 'rgb(12, 86, 94)'}
-  }], {
+  }], {title:{text: 'How Each City Has Changed Over Time'},
     xaxis: {
         title: 'Year',
       type: 'date', 

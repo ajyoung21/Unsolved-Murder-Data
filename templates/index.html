@@ -29,23 +29,32 @@
       background-image: linear-gradient(to bottom right,  rgb(34, 131, 142),  rgb(12, 86, 94))
   
     }
-    h1, h2{
+
+    #animated{ width: 60%
+
+    }
+    h1, h2, h3{
       color: rgba(255, 255, 255, 0.872)
 
     }
     #animated{
       opacity: .8;
+      display: inline-block;
       
 
     }
-
+    #line-plot{
+      opacity: .8;
+      width: 60%;
+      display: inline-block;
+    }
     select, button{
       opacity: .75;
     }
 
     #map-id{
       height: 533px;
-      width: 800px;
+      width: 66%
     }
     .leaflet-popup-content {
     max-width: 200px;
@@ -77,9 +86,18 @@
 
   <center><h1>Number of Murders and Unsolved Murder Rate of the Top 50 Cities in the US</h1></center>
   <center><div id="map-id"></div> </center></br>
-  <!-- <center><div id="line-plot"></div></center> -->
+  <center><h3>Click on <img src="../static/img/Layers_Icon.png" height="35px"> in the top right of the map for individual race data.</h3>
+  </center>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+  <center><div id="line-plot"></div></center>
+</div>
 
   <center>
+
+      <div class="col-md-6">
+      <center><h3>Select a city and factor to update the chart below. (Be wary of the changing Y-Axis)</h4.></center>
   <select id="city_selection">
   <option value="Albuquerque">Albuquerque</option>
   <option value="Atlanta">Atlanta</option>
@@ -156,8 +174,11 @@
   <button id="submit" type="submit" class="btn btn-success center-block">Update Chart</button>
 </center>
   <center><div id="animated"></div></center>
+</div>
+</div>
+</div>
 
-  <h2>Note: It looks like the "Total" percentages are off...</h2>
+
 
   <!-- D3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
