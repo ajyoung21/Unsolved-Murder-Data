@@ -423,7 +423,7 @@ var legend2 = L.control({position: 'bottomright'});
 legend1.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
     div.innerHTML =
-    "<center>Overall Legend</br></center>" +
+    "<h5 id=legend-text><center>Overall Legend</br></center>" +
     "Larger Bubbles = More Homicides</br>" +
     "</br>" + 
     `<30% Unsolved Murders <i style='background: ${colorone}'></i>` + "</br>" +
@@ -431,14 +431,14 @@ var div = L.DomUtil.create('div', 'info legend');
     `40-50% Unsolved: Murders<i style='background: ${colorthree}'></i>` +  "</br>"+
     `50-60% Unsolved: Murders<i style='background: ${colorfour}'></i>` +  "</br>"+
     `60-70% Unsolved: Murders<i style='background: ${colorfive}'></i>` +  "</br>"+
-    `>70% Unsolved: Murders<i style='background: ${colorsix}'></i>` +  "</br>";
+    `>70% Unsolved: Murders<i style='background: ${colorsix}'></i></h5>` +  "</br>";
 return div;
 };
 
 legend2.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
     div.innerHTML =
-      "<center>Individual Race Legend</br>" +
+      "<h5 id=legend-text><center>Individual Race Legend</br>" +
       "Larger Bubbles = More Homicides</center>"+
       "</br>"+
       `>15% Below the Average Unsolved Rate<i style='background: ${colorone}'></i>` + "</br>" +
@@ -446,7 +446,7 @@ var div = L.DomUtil.create('div', 'info legend');
       `0-7.5% Below the Average Unsolved Rate<i style='background: ${colorthree}'></i>` +  "</br>"+
       `0-7.5%% Above the Average Unsolved Rate<i style='background: ${colorfour}'></i>` +  "</br>"+
       `7.5-15%% Above the Average Unsolved Rate<i style='background: ${colorfive}'></i>` +  "</br>"+
-      `>15%% Above the Average Unsolved Rate<i style='background: ${colorsix}'></i>` +  "</br>";
+      `>15%% Above the Average Unsolved Rate<i style='background: ${colorsix}'></i></h5>` +  "</br>";
 return div;
 };
 
