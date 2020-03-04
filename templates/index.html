@@ -23,10 +23,29 @@
 <body>
 
   <style>
+    body{
+      /* background-color: rgb(12, 86, 94), */
+      /* background-color: rgb(12, 86, 94), */
+      background-image: linear-gradient(to bottom right,  rgb(34, 131, 142),  rgb(12, 86, 94))
+  
+    }
+    h1, h2{
+      color: rgba(255, 255, 255, 0.872)
+
+    }
+    #animated{
+      opacity: .8;
+      
+
+    }
+
+    select, button{
+      opacity: .75;
+    }
 
     #map-id{
-      height: 800px;
-      width: 1200px;
+      height: 533px;
+      width: 800px;
     }
     .leaflet-popup-content {
     max-width: 200px;
@@ -57,10 +76,94 @@
   <!-- The div that holds our map -->
 
   <center><h1>Number of Murders and Unsolved Murder Rate of the Top 50 Cities in the US</h1></center>
-  <center><div id="map-id"></div> </center>
+  <center><div id="map-id"></div> </center></br>
+  <!-- <center><div id="line-plot"></div></center> -->
+
+  <center>
+  <select id="city_selection">
+  <option value="Albuquerque">Albuquerque</option>
+  <option value="Atlanta">Atlanta</option>
+  <option value="Baltimore">Baltimore</option>
+  <option value="Baton Rouge">Baton Rouge</option>
+  <option value="Birmingham">Birmingham</option>
+  <option value="Boston">Boston</option>
+  <option value="Buffalo">Buffalo</option>
+  <option value="Charlotte">Charlotte</option>
+  <option value="Chicago">Chicago</option>
+  <option value="Cincinnati">Cincinnati</option>
+  <option value="Columbus">Columbus</option>
+  <option value="Dallas">Dallas</option>
+  <option value="Denver">Denver</option>
+  <option value="Detroit">Detroit</option>
+  <option value="Durham">Durham</option>
+  <option value="Fort Worth">Fort Worth</option>
+  <option value="Freson">Fresno</option>
+  <option value="Houston">Houston</option>
+  <option value="Indianapolis">Indianapolis</option>
+  <option value="Jacksonville">Jacksonville</option>
+  <option value="Kansas City">Kansas City</option>
+  <option value="Las Vegas">Las Vegas</option>
+  <option value="Long Beach">Long Beach</option>
+  <option value="Los Angeles">Los Angeles</option>
+  <option value="Louisville">Louisville</option>
+  <option value="Memphis">Memphis</option>
+  <option value="Miami">Miami</option>
+  <option value="Milwaukee">Milwaukee</option>
+  <option value="Minneapolis">Minneapolis</option>
+  <option value="Nashville">Nashville</option>
+  <option value="New Orleans">New Orleans</option>
+  <option value="New York">New York</option>
+  <option value="Oakland">Oakland</option>
+  <option value="Oklahoma City">Oklahoma City</option>
+  <option value="Omaha">Omaha</option>
+  <option value="Philadelphia">Philadelphia</option>
+  <option value="Phoenix">Phoenix</option>
+  <option value="Pittsburgh">Pittsburgh</option>
+  <option value="Richmond">Richmond</option>
+  <option value="Sacramento">Sacramento</option>
+  <option value="San Antonio">San Antonio</option>
+  <option value="San Diego">San Diego</option>
+  <option value="San Francisco">San Francisco</option>
+  <option value="Savannah">Savannah</option>
+  <option value="St. Louis">St. Louis</option>
+  <option value="Stockton">Stockton</option>
+  <option value="Tampa">Tampa</option>
+  <option value="Tulsa">Tulsa</option>
+  <option value="Washington">Washington</option>
+
+  
+  </select>
+
+
+  <select id="factor_selection">
+  <option value="Unsolved Murder %">Unsolved Murder %</option>
+  <option value="Total Murders">Total Murders</option>
+  <option value="Unsolved Murders">Unsolved Murders</option>
+  <option value="% Total Asian">% Total Asian</option>
+  <option value="% Unsolved Asian">% Unsolved Asian</option>
+  <option value="% Total Black">% Total Black</option>
+  <option value="% Unsolved Black">% Unsolved Black</option>
+  <option value="% Total Hispanic">% Total Hispanic</option>
+  <option value="% Unsolved Hispanic">% Unsolved Hispanic</option>
+  <option value="% Total White">% Total White</option>
+  <option value="% Unsolved White">% Unsolved White</option>
+  <option value="% Total Other">% Total Other</option>
+  <option value="% Unsolved Other">% Unsolved Other</option>
+  <option value="% Total Unknown">% Total Unknown</option>
+  <option value="% Unsolved Unknown">% Unsolved Unknown</option>
+
+</select>
+  <button id="submit" type="submit" class="btn btn-success center-block">Update Chart</button>
+</center>
+  <center><div id="animated"></div></center>
+
+  <h2>Note: It looks like the "Total" percentages are off...</h2>
 
   <!-- D3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
   <!-- MomentJS -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
@@ -81,6 +184,8 @@
 
   <!-- Our JavaScript -->
   <script type="text/javascript" src="static/js/logic.js"></script>
+  <script type="text/javascript" src="static/js/linegraph.js"></script>
+  <script type="text/javascript" src="static/js/animated.js"></script>
 
 </body>
 
