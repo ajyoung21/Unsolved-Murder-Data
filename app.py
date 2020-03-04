@@ -11,7 +11,17 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/contact")
+def about():
+    return render_template("contact.html")
 
+@app.route("/data")
+def podcast():
+    return render_template("data.html")
+
+@app.route("/about")
+def globe():
+    return render_template("about.html")
 
 if __name__ == '__main__':
 	port = int(os.environ.get('PORT', 5000))
