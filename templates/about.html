@@ -24,20 +24,34 @@
 <body>
 
         <style>
+            
                 body{
+                    
                   /* background-color: rgb(12, 86, 94), */
                   /* background-color: rgb(12, 86, 94), */
                   background-image: linear-gradient(to bottom right,  rgb(34, 131, 142),  rgb(12, 86, 94))
-              
+            
                 }
+                #all-text{padding: 3%;}
                 
+                nav{
+                    padding: 0%
+                }
                 nav h3 {
                 color:rgb(150, 224, 250)
 }
             
-                h1, h2, h3{
+                h1, h2, h3, h4, h5{
                   color: rgba(255, 255, 255, 0.872)
             
+                }
+
+                h2 {
+                    text-shadow: 2px 2px 4px #000000;
+                }
+
+                img {
+                    width: 100%
                 }
             
             
@@ -62,3 +76,52 @@
           </li>
         </ul>
       </nav>
+
+      <div id=all-text>
+
+      <h2>Premise</h2></br>
+      <h4><p>This dashboard and data are based on a <a href='https://www.washingtonpost.com/graphics/2018/investigations/unsolved-homicide-database/'>2018 Washington Post Article</a>
+    detailing the rate of unsolved murders in 50 major U.S. cities. You can pull the data <a href='https://github.com/washingtonpost/data-homicides'>here</a>. </p>
+
+    <p>While the original article is very well put together and has more specific map data, you can only look at one city at a time. We (the person who introduced this to me and I) were
+        wondering how the cities compared to eachother and if there were any regional trends in the data (e.g. did police in the south solve more murders than in the north).
+        We were also wondering if any cities had experienced significant improvement over time.
+    </p>
+    
+
+    <h2>Analysis</h2></br>
+   <p><h4> While I didn't see any robust regional trends, my data analysis does support the Washington Post's conclusion that murders of white people have a higher rate of being 
+       solved (ending in an arrest) than those of minorities, especially African-Americans.</p>
+
+       <p>Just look at these two charts:</p>
+       <div class = "row">
+           <div class = "col-md-6">
+        <img src="../static/img/Black_Murder.png">
+    </div>
+    <div class = "col-md-6">
+        <img src="../static/img/White_Murder.png">
+    </div>
+    </div>
+    <h4><p>Another takeaway from this project is how much the unsolved murder rate may vary city to city. 
+        I was surprised by how relatively low New York's unsolved murder rate (39%) was given that its 
+    large population may present issues (Note: NYC only has two years of data). This project also puts into perspective 
+    how terrible the situation in Chicago is... </p>
+
+    <p>Anyways, I hope you enjoy sifting through the data and visualizations. I apologize for the 
+        grim subject matter, but I hope this gives context and information that is helpful.  </p></br>
+
+<p><h2>Technologies Used</h2></p> </br>
+
+<h4>Leaflet.js, Plotly.js, HTML, Bootstrap CSS, Flask, Heroku, Pandas, Jupyter Notebook</h4>
+
+
+   
+</h4>
+       </div>
+
+    </h4>
+</h4>
+
+</div>
+
+
